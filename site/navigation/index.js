@@ -31,7 +31,7 @@ const Navigation = (props) => {
   const navClasses = classnames({
     'mdl-navigation': true,
     'mdl-typography--body-1-force-preferred-font': true,
-    [styles.nav]: true,
+    [styles.nav]: !props.isDrawer,
   });
 
 
@@ -42,10 +42,10 @@ const Navigation = (props) => {
             LINKS.map((l) => {
               const linkClasses = classnames({
                 'mdl-navigation__link': true,
-                [styles.link]: true,
+                [styles.link]: !props.isDrawer,
                 [styles.active]: (l.route === '/') ?
-                                 (activeRoute === l.route) :
-                                 activeRoute.match(new RegExp(l.route))
+                                 !props.isDrawer && (activeRoute === l.route) :
+                                 !props.isDrawer && activeRoute.match(new RegExp(l.route)),
               });
               return (
                 <a

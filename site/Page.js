@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Header from './header';
+import Navigation from './navigation';
 
 class Page extends Component {
 
@@ -16,7 +17,7 @@ class Page extends Component {
     return (
       <div className="mdl-layout mdl-js-layout mdl-layout--fixed-header">
         <Header path={this.props.path} />
-        {/* <Navigation isDrawer /> */}
+        <Navigation isDrawer path={this.props.path} />
         <main className="mdl-layout__content">
           {
             React.Children.map(this.props.children, c => (
