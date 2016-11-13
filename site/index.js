@@ -37,9 +37,10 @@ const getTemplate = (path, query = {}, assets = {}) => {
       <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
       <meta name="theme-color" content="#ffffff" />
       <meta name="description" content="Clay Diffrient Software Solutions, a web software development shop." />
-      <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css" />
-      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
-      <link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.green-blue.min.css" />
+      <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css" />
+      <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons" />
+      <link rel="stylesheet" href="//code.getmdl.io/1.2.1/material.green-blue.min.css" />
+      <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
       <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png" />
       <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png" />
       <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png" />
