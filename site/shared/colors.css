@@ -1,10 +1,10 @@
 :global(:root) {
   --darkPrimaryColor: #388e3c;
-  --defaultPrimaryColor: #4CAF50;
-  --lightPrimaryColor: #C8E6C9;
-  --textPrimaryColor: #FFFFFF;
-  --accentColor: #03A9F4;
+  --defaultPrimaryColor: #4caf50;
+  --lightPrimaryColor: #c8e6c9;
+  --textPrimaryColor: #fff;
+  --accentColor: #03a9f4;
   --primaryTextColor: #212121;
   --secondaryTextColor: #757575;
-  --dividerColor: #BDBDBD;
+  --dividerColor: #bdbdbd;
 }

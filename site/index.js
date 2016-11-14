@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import ReactDOMServer from 'react-dom/server';
 import './shared/colors.css';
-import Page from './Page';
+import Page from './page';
 import Portfolio from './portfolio';
 
 const getProperPageComponent = (path) => {
@@ -58,11 +58,11 @@ const getTemplate = (path, query = {}, assets = {}) => {
       <link rel="manifest" href="/manifest.json" />
       <title>Clay Diffrient</title>
       <link href="/${assets.styles}" rel="stylesheet" />
-      <script defer src="https://code.getmdl.io/1.2.1/material.min.js"></script>
     </head>
     <body>
       <div id="main">${getHTMLForPage(path)}</div>
       <script src="/${assets.main}"></script>
+      <script defer src="https://code.getmdl.io/1.2.1/material.min.js"></script>
     </body>
   </html>`;
 
