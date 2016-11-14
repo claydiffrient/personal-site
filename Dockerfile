@@ -1,4 +1,4 @@
-FROM node:6
+FROM node:7.1.0
 
 ENV APP_HOME /usr/src/app
 
@@ -7,12 +7,13 @@ WORKDIR $APP_HOME
 
 COPY package.json /usr/src/app
 
-RUN NODE_ENV=production npm install
+RUN npm install
 
 COPY . /usr/src/app
 
 RUN npm run build && \
     npm cache clean && \
+    NODE_ENV=production npm prune && \
     wget https://github.com/Yelp/dumb-init/releases/download/v1.2.0/dumb-init_1.2.0_amd64.deb && \
     dpkg -i dumb-init_*.deb
 
