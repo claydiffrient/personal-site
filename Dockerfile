@@ -1,11 +1,14 @@
 FROM node:7.1.0
 
 ENV APP_HOME /usr/src/app
+ENV APP_DIR /app
 
 RUN mkdir -p $APP_HOME
+RUN mkdir -p $APP_DIR
 WORKDIR $APP_HOME
 
-COPY package.json /usr/src/app
+COPY package.json $APP_HOME
+COPY deploy/ $APP_DIR
 
 RUN npm install
 
