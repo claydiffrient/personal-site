@@ -20,6 +20,6 @@ RUN npm run build && \
     wget https://github.com/Yelp/dumb-init/releases/download/v1.2.0/dumb-init_1.2.0_amd64.deb && \
     dpkg -i dumb-init_*.deb
 
-EXPOSE 3000
+EXPOSE 8080
 
 CMD ["dumb-init", "npm", "run", "start:server"]
