@@ -28,7 +28,7 @@ function createDeployTag (target) {
   }
 }
 
-if (exec('git push dokku next:master').code === 0) {
+if (exec('git push dokku master').code === 0) {
   createDeployTag('web');
 } else {
   echo('--> Deploy failed, try again later');
