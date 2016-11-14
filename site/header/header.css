@@ -3,6 +3,20 @@ body {
   background: var(--darkPrimaryColor);
 }
 
+:global(.is-compact) :local(.title) {
+  display: none;
+}
+
+:global(.is-compact) :local(.logo) {
+  height: 50px;
+  width: 50px;
+  margin-top: 7px;
+}
+
+:global(.is-compact) :local(.logoRow) {
+  min-height: auto;
+}
+
 .header {
   position: relative;
   background-color: var(--lightPrimaryColor);
