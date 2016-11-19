@@ -29,7 +29,10 @@ module.exports = {
     new CopyWebpackPlugin([{
       from: 'site/static_assets',
     }]),
-    new StaticSiteGeneratorPlugin('main', paths, {}, { window: {} }),
+    new StaticSiteGeneratorPlugin('main', paths, {}, { window: {
+      addEventListener () {},
+      navigator: {},
+    } }),
   ],
 
   devtool: 'inline-source-map',

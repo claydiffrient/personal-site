@@ -1,9 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import ReactDOMServer from 'react-dom/server';
+import 'react-mdl/extra/material';
 import './shared/colors.css';
 import Page from './page';
 import Portfolio from './portfolio';
+
 
 const getProperPageComponent = (path) => {
   switch (path) {
