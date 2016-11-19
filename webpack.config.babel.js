@@ -63,6 +63,10 @@ module.exports = {
         include: /material\.green-blue\.min\.css/,
         loader: ExtractTextPlugin.extract('style', 'css'),
       },
+      {
+        test: /\.png$/,
+        loader: 'url-loader?limit=100000',
+      },
     ],
   },
   postcss () {

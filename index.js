@@ -14,7 +14,7 @@ const port = 8080;
 
 // config
 const file = new staticServer.Server('./public', {
-  cache: 3600,
+  cache: 31536000,
   gzip: true,
 });
 
