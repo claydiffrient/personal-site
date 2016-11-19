@@ -1,5 +1,6 @@
 import React from 'react';
 import classnames from 'classnames';
+import { Navigation, Drawer, HeaderRow } from 'react-mdl';
 import styles from './navigation.css';
 
 const LINKS = [{
@@ -17,55 +18,55 @@ const LINKS = [{
 },
 ];
 
-const Navigation = (props) => {
+const SiteNavigation = (props) => {
   const activeRoute = props.path;
 
-  const rootClasses = classnames({
-    'mdl-layout__header-row': !props.isDrawer,
-    'mdl-layout--large-screen-only': !props.isDrawer,
-    [styles.root]: !props.isDrawer,
-    'mdl-layout__drawer': props.isDrawer,
-    'mdl-layout--small-screen-only': props.isDrawer,
-  });
-
   const navClasses = classnames({
-    'mdl-navigation': true,
-    'mdl-typography--body-1-force-preferred-font': true,
     [styles.nav]: !props.isDrawer,
   });
 
+  const renderNav = () => (
+    <Navigation className={navClasses}>
+      {
+             LINKS.map((l) => {
+               const linkClasses = classnames({
+                 [styles.link]: !props.isDrawer,
+                 [styles.active]: (l.route === '/') ?
+                                  !props.isDrawer && (activeRoute === l.route) :
+                                  !props.isDrawer && activeRoute.match(new RegExp(l.route)),
+               });
+               return (
+                 <a
+                   className={linkClasses}
+                   key={l.route}
+                   href={l.route}
+                 >
+                   {l.text}
+                 </a>
+               );
+             })
+           }
+    </Navigation>
+    );
 
+
+  if (props.isDrawer) {
+    return (
+      <Drawer>
+        {renderNav()}
+      </Drawer>
+    );
+  }
   return (
-    <div className={rootClasses}>
-      <nav className={navClasses}>
-        {
-            LINKS.map((l) => {
-              const linkClasses = classnames({
-                'mdl-navigation__link': true,
-                [styles.link]: !props.isDrawer,
-                [styles.active]: (l.route === '/') ?
-                                 !props.isDrawer && (activeRoute === l.route) :
-                                 !props.isDrawer && activeRoute.match(new RegExp(l.route)),
-              });
-              return (
-                <a
-                  className={linkClasses}
-                  key={l.route}
-                  href={l.route}
-                >
-                  {l.text}
-                </a>
-              );
-            })
-          }
-      </nav>
-    </div>
+    <HeaderRow className={styles.root}>
+      {renderNav()}
+    </HeaderRow>
   );
 };
 
-Navigation.propTypes = {
+SiteNavigation.propTypes = {
   isDrawer: React.PropTypes.bool,
   path: React.PropTypes.string,
 };
 
-export default Navigation;
+export default SiteNavigation;
