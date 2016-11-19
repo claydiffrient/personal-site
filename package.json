@@ -5,11 +5,13 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npm-run-all --parallel start:*",
+    "start": "npm-run-all clean --parallel start:*",
+    "clean": "rm -rf public/",
     "start:server": "node index.js",
     "start:build-watch": "webpack --watch --progress",
     "deploy": "node scripts/deploy.js",
-    "build": "cross-env NODE_ENV=production webpack --progress -p --config webpack.config.production.babel.js"
+    "build": "npm-run-all clean --parallel build:*",
+    "build:prod": "cross-env NODE_ENV=production webpack --progress -p --config webpack.config.production.babel.js"
   },
   "repository": {
     "type": "git",
