@@ -30,7 +30,8 @@
     "node-static": "^0.7.9",
     "query-string": "^4.2.3",
     "react": "^15.3.2",
-    "react-dom": "^15.3.2"
+    "react-dom": "^15.3.2",
+    "react-mdl": "^1.8.0"
   },
   "devDependencies": {
     "babel-eslint": "^7.1.0",

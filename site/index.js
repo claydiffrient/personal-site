@@ -62,7 +62,6 @@ const getTemplate = (path, query = {}, assets = {}) => {
     <body>
       <div id="main">${getHTMLForPage(path)}</div>
       <script src="/${assets.main}"></script>
-      <script defer src="https://code.getmdl.io/1.2.1/material.min.js"></script>
     </body>
   </html>`;
 

@@ -19,14 +19,10 @@ const prodPlugins = [
       screw_ie8: true,
     },
   }),
-  new CompressionPlugin({
-    asset: '[path].gz[query]',
-    algorithm: 'gzip',
-    threshold: 10240,
-    minRatio: 0.8,
-  }),
+  new CompressionPlugin(),
 ];
 
+devConfig.devtool = null;
 devConfig.plugins = devConfig.plugins.concat(prodPlugins);
 
 export default devConfig;
