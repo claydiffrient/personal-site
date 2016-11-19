@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import ReactDOMServer from 'react-dom/server';
 import 'react-mdl/extra/material';
+import 'react-mdl/extra/css/material.green-blue.min.css';
 import './shared/colors.css';
 import Page from './page';
 import Portfolio from './portfolio';
@@ -41,7 +42,7 @@ const getTemplate = (path, query = {}, assets = {}) => {
       <meta name="description" content="Clay Diffrient Software Solutions, a web software development shop." />
       <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css" />
       <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons" />
-      <link rel="stylesheet" href="//code.getmdl.io/1.2.1/material.green-blue.min.css" />
+      <!-- <link rel="stylesheet" href="//code.getmdl.io/1.2.1/material.green-blue.min.css" /> -->
       <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
       <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png" />
       <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png" />

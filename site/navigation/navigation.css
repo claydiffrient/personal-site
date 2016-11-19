@@ -12,6 +12,10 @@
   width: 100%;
 }
 
+:global(.is-compact) :local(.root) {
+  display: none;
+}
+
 .link {
   flex: 1;
   line-height: 42px;

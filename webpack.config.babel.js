@@ -48,8 +48,21 @@ module.exports = {
 
   module: {
     loaders: [
-      { test: /\.jsx?$/, exclude: /node_modules/, loader: 'babel' },
-      { test: /\.css$/, loader: ExtractTextPlugin.extract('style', 'css?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]') },
+      {
+        test: /\.jsx?$/,
+        exclude: /node_modules/,
+        loader: 'babel',
+      },
+      {
+        test: /\.css$/,
+        exclude: /material\.green-blue\.min\.css/,
+        loader: ExtractTextPlugin.extract('style', 'css?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]'),
+      },
+      {
+        test: /\.css$/,
+        include: /material\.green-blue\.min\.css/,
+        loader: ExtractTextPlugin.extract('style', 'css'),
+      },
     ],
   },
   postcss () {
