@@ -2266,6 +2266,10 @@ flatten@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/flatten/-/flatten-1.0.2.tgz#dae46a9d78fbe25292258cc1e780a41d95c03782"
 
+fontfaceobserver:
+  version "2.0.5"
+  resolved "https://registry.yarnpkg.com/fontfaceobserver/-/fontfaceobserver-2.0.5.tgz#29cf224181c7bf11566ade970c5cc2dab484a217"
+
 for-in@^0.1.5:
   version "0.1.6"
   resolved "https://registry.yarnpkg.com/for-in/-/for-in-0.1.6.tgz#c9f96e89bfad18a545af5ec3ed352a1d9e5b4dc8"
@@ -3314,10 +3318,6 @@ map-obj@^1.0.0, map-obj@^1.0.1:
 map-stream@~0.1.0:
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/map-stream/-/map-stream-0.1.0.tgz#e56aa94c4c8055a16404a0674b78f215f7c8e194"
-
-material-design-lite:
-  version "1.2.1"
-  resolved "https://registry.yarnpkg.com/material-design-lite/-/material-design-lite-1.2.1.tgz#09e5caab2575af8ee21b2630bff175c5a822c662"
 
 math-expression-evaluator@^1.2.14:
   version "1.2.14"
