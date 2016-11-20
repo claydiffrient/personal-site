@@ -28,8 +28,8 @@ class Page extends Component {
               React.cloneElement(c, { path: this.props.path })
             ))
           }
+          <Footer />
         </Content>
-        <Footer />
       </Layout>
     );
   }
