@@ -14,6 +14,7 @@ import styles from './portfolio.css';
 
 const Portfolio = () => (
   <Grid className={styles.root}>
+    <h1 className="srOnly">Portfolio</h1>
     <Cell col={12} component={Card} shadow={2}>
       <CardTitle>
         Welcome

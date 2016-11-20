@@ -4,6 +4,7 @@ import Header from '../header';
 import Navigation from '../navigation';
 import Footer from '../footer';
 import styles from './page.css';
+import '../shared/utilities.css';
 
 
 class Page extends Component {
@@ -12,10 +13,6 @@ class Page extends Component {
     path: React.PropTypes.string,
     children: React.PropTypes.node,
   };
-
-  componentDidMount () {
-    // window.componentHandler.upgradeDom();
-  }
 
   render () {
     return (
