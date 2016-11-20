@@ -20,7 +20,7 @@ module.exports = {
   output: {
     filename: 'index.[hash:10].js',
     path: 'public',
-    publicPath: '/public/',
+    publicPath: '/',
     libraryTarget: 'umd',
   },
 
@@ -64,8 +64,8 @@ module.exports = {
         loader: ExtractTextPlugin.extract('style', 'css'),
       },
       {
-        test: /\.png$/,
-        loader: 'url-loader?limit=100000',
+        test: /\.(jpe?g|png|gif|svg)$/i,
+        loader: 'url-loader?limit=100000!img?progressive=true',
       },
     ],
   },

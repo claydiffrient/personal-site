@@ -1,33 +1,24 @@
-const fakeData = [];
+import arcsitioImage from './images/arcsitio.png';
+import lindsayImage from './images/lindsaysalazar.png';
+import alpineImage from './images/alpine.png';
 
-for (let i = 0; i < 30; i++) {
-  fakeData.push({
-    imageUrl: 'http://placehold.it/350x150',
-    title: 'Blog template',
-    pageLink: '#',
-    text: 'Enim labore aliqua consequat ut quis ad occaecat aliquip incididunt. Sunt nulla eu enim irure enim nostrud aliqua consectetur ad consectetur sunt ullamco officia. Ex officia laborum et consequat duis.',
-  });
-}
-
+// debugger;
 
 const PORTFOLIO_DATA = [{
-  imageUrl: 'http://placehold.it/350x150',
-  title: 'Blog template',
-  text: 'Enim labore aliqua consequat ut quis ad occaecat aliquip incididunt. Sunt nulla eu enim irure enim nostrud aliqua consectetur ad consectetur sunt ullamco officia. Ex officia laborum et consequat duis.',
+  imageUrl: arcsitioImage,
+  title: 'ArcSitio Design',
+  pageLink: '#',
+  text: 'An interesting static site solution.',
+}, {
+  imageUrl: lindsayImage,
+  title: 'Lindsay Salazar Photography',
+  pageLink: '#',
+  text: 'Wordpress theme modifications',
+}, {
+  imageUrl: alpineImage,
+  title: 'Alpine Court Reporting',
+  pageLink: '#',
+  text: 'HTML/CSS modifications to enhance SEO',
 }];
 
-export default fakeData; // PORTFOLIO_DATA;
-
-
-// {/* <div className="mdl-card__media">
-//   <img className="article-image" src="" alt="" />
-// </div>
-// <div className="mdl-card__title">
-//   <h2 className="mdl-card__title-text">Blog template</h2>
-// </div>
-// <div className="mdl-card__supporting-text">
-//               Enim labore aliqua consequat ut quis ad occaecat aliquip incididunt. Sunt nulla eu enim irure enim nostrud aliqua consectetur ad consectetur sunt ullamco officia. Ex officia laborum et consequat duis.
-//           </div>
-// <div className="mdl-card__actions mdl-card--border">
-//   <a className="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="portfolio-example01.html">Read more</a>
-// </div> */}
+export default PORTFOLIO_DATA;

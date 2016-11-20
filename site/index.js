@@ -100,9 +100,14 @@ if (typeof document !== 'undefined') {
 
 module.exports = function render (locals, callback) {
   const assetKeys = Object.keys(locals.webpackStats.compilation.assets);
-  const assets = {
-    main: assetKeys[0],
-    styles: assetKeys[1],
-  };
+  const assets = {};
+  assetKeys.forEach((ak) => {
+    if (ak.endsWith('.css')) {
+      assets.styles = ak;
+    } else if (ak.endsWith('.js')) {
+      assets.main = ak;
+    }
+  });
+
   callback(null, getTemplate(locals.path, {}, assets));
 };
