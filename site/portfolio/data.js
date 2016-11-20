@@ -4,6 +4,7 @@ for (let i = 0; i < 30; i++) {
   fakeData.push({
     imageUrl: 'http://placehold.it/350x150',
     title: 'Blog template',
+    pageLink: '#',
     text: 'Enim labore aliqua consequat ut quis ad occaecat aliquip incididunt. Sunt nulla eu enim irure enim nostrud aliqua consectetur ad consectetur sunt ullamco officia. Ex officia laborum et consequat duis.',
   });
 }
