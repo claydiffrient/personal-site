@@ -7,12 +7,15 @@ import 'react-mdl/extra/css/material.green-blue.min.css';
 import './shared/colors.css';
 import Page from './page';
 import Portfolio from './portfolio';
+import About from './about';
 import { FourOhFour, FiveHundred } from './errors';
 
 const getProperPageComponent = (path) => {
   switch (path) {
     case '/':
       return Portfolio;
+    case '/about/':
+      return About;
     case '/500.html':
       return FiveHundred;
     case '/404.html':
