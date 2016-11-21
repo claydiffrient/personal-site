@@ -10,6 +10,8 @@ const paths = [
   '/about/',
   '/blog/',
   '/contact/',
+  '404.html',
+  '500.html',
 ];
 
 module.exports = {

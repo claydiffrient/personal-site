@@ -21,6 +21,13 @@ const file = new staticServer.Server('./public', {
 // serve
 http.createServer((request, response) => {
   request.addListener('end', () => {
-    file.serve(request, response);
+    file.serve(request, response, (e) => {
+      if (e && (e.status === 404)) {
+        file.serveFile('/404.html', 404, {}, request, response);
+      }
+      if (e && (e.status === 500)) {
+        file.serveFile('/500.html', 500, {}, request, response);
+      }
+    });
   }).resume();
 }).listen(port);
