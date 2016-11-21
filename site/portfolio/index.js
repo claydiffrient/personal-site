@@ -29,7 +29,7 @@ const Portfolio = () => (
     </Cell>
     {
       PROJECTS.map(p => (
-        <Cell shadow={2} component={Card}>
+        <Cell key={p.title} shadow={2} component={Card}>
           <CardMedia>
             <img className={styles.image} src={p.imageUrl} alt="" />
           </CardMedia>
