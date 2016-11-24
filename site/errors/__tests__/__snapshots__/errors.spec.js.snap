@@ -1,0 +1,43 @@
+exports[`Error Tests has a proper 404 1`] = `
+<div
+  className="mdl-grid root">
+  <div
+    className="mdl-card mdl-cell mdl-cell--12-col mdl-shadow--4dp">
+    <div
+      className="mdl-card__title">
+      <h2
+        className="mdl-card__title-text">
+        Page Not Found
+      </h2>
+    </div>
+    <div
+      className="mdl-card__supporting-text">
+      <p>
+        Looks like you were trying to find a page that doesn\'t exist. :(
+      </p>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Error Tests has a proper 500 1`] = `
+<div
+  className="mdl-grid root">
+  <div
+    className="mdl-card mdl-cell mdl-cell--12-col mdl-shadow--4dp">
+    <div
+      className="mdl-card__title">
+      <h2
+        className="mdl-card__title-text">
+        Server Error
+      </h2>
+    </div>
+    <div
+      className="mdl-card__supporting-text">
+      <p>
+        Something went horribly wrong, try again later
+      </p>
+    </div>
+  </div>
+</div>
+`;
