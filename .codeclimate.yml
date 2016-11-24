@@ -1,0 +1,17 @@
+engines:
+  eslint:
+    enabled: true
+    channel: 'eslint-3'
+  stylelint:
+    enabled: true
+    channel: 'beta'
+  duplication:
+    enabled: true
+    config:
+      languages:
+        javascript:
+ratings:
+  paths:
+    - "site/**/*"
+    - "**.css"
+    - "**.js"
