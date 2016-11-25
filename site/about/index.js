@@ -18,11 +18,30 @@ const About = () => (
         <h1 className="mdl-card__title-text">About</h1>
       </CardTitle>
       <CardText>
-        <p>My name is Clay Diffrient.  I'm a software engineer based out of Utah.  I specialize mostly in front-end web development, but
-        I have experience doing a little bit of everything.  My goal is to provide solutions that represent my clients and are customized
-         to their needs.</p>
-
-        <p>Please checkout my portfolio of recent work below and take a look around at the other sections.</p>
+        <p>
+          As you know by now my name is Clay Diffrient, but you probably want to know
+          a bit more than that since you've made your way to this page.  Let me give you
+          some details.
+        </p>
+        <p>
+          I figure I can summarize a lot about me in a table so that's what I've done.
+        </p>
+        <table>
+          <tbody>
+            <tr>
+              <th scope="row">Profession</th>
+              <td>Software Engineer (front-end mostly)</td>
+            </tr>
+            <tr>
+              <th scope="row">Family</th>
+              <td>Married, Father of 2 sons.</td>
+            </tr>
+            <tr>
+              <th scope="row">Politics</th>
+              <td>Libertarian-leaning independent</td>
+            </tr>
+          </tbody>
+        </table>
       </CardText>
     </Cell>
   </Grid>
